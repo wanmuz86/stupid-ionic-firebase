@@ -19,8 +19,7 @@ export class ProfilePage implements OnInit {
   	 .get()
   	 .then(
   	 	userProfileSnapshot=>{
-  	 		console.log(userProfileSnapshot)
-  	 		console.log(userProfileSnapshot.data())
+
   	 	this.userProfile = userProfileSnapshot.data();
   	 })
   }

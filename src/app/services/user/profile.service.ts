@@ -22,7 +22,9 @@ export class ProfileService {
 	getUserProfile(){
 		let userId = localStorage.getItem('userId')
 		console.log(userId)
-		return  firebase.firestore().collection('/userProfile')
+		return  firebase
+		.firestore()
+		.collection(`/userProfile`)
 				.doc(userId)
 	}
 }
