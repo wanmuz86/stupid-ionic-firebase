@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Create new Event</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item>
+		<ion-label position="floating">Event Name</ion-label>
+		<ion-input  type="text" [(ngModel)]="name"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label>Enter Date and Time</ion-label>
+		<ion-datetime displayFormat="D MMM YYYY H:mm" min="2019" max="2025" [(ngModel)]="datetime"></ion-datetime>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Event Price</ion-label>
+		<ion-input  type="text" [(ngModel)]="price"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position="floating">Event Cost</ion-label>
+		<ion-input  type="text" [(ngModel)]="cost"></ion-input>
+	</ion-item>
+	<ion-button color="primary" block (click)="createPressed()">Create New Event</ion-button>
+
+</ion-content>

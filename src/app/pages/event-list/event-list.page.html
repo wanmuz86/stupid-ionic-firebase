@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>List of Event</ion-title>
+     <ion-buttons slot="secondary">
+    <ion-button color="secondary" [routerLink]="'/event-create'">
+      <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+    </ion-button>
+    <ion-button color="secondary" [routerLink]="'/profile'">
+      <ion-icon slot="icon-only" name="person"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+	<ion-item *ngFor="let event of eventList" [routerLink]="['/event',event.id]">
+		<ion-label>
+		<h2>{{event.name}}</h2>
+		<p>{{event.date}}</p>
+		<p>{{event.price}}</p>
+	</ion-label>
+	</ion-item>
+</ion-list>
+
+</ion-content>
